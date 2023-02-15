@@ -17,7 +17,7 @@ function getCountries(continent) {
 function getCountryPopInfo() {
     const countries = [];
     fetch('https://countriesnow.space/api/v0.1/countries/population').then(data => data.json()).then(data => {
-        // console.log(data.data);
+        console.log(data.data);
         data.data.map((element => {
             let obj = {name: element.country, code: element.iso3, population: element.populationCounts};
             countries.push(obj);
@@ -45,9 +45,9 @@ const countriesEurope = getCountries('europe');
 const countriesPop = getCountryPopInfo();
 const citiesPop = getCityPopInfo();
 
-console.log(countriesEurope);
-console.log(countriesPop);
-console.log(citiesPop);
+// console.log(countriesEurope);
+// console.log(countriesPop);
+// console.log(citiesPop);
 
 let chart = document.getElementById('chart');
 
